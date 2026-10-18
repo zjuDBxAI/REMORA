@@ -1,0 +1,16 @@
+{
+  "kind": "native-primary",
+  "primary_kind": "opq-pq",
+  "primary_model": "datasets/NEW_DATASET/primary/primary_model.bin",
+  "primary_codes": "datasets/NEW_DATASET/primary/primary_codes.bin",
+  "queries": "datasets/NEW_DATASET/data/query.build.fbin",
+  "knn": "datasets/NEW_DATASET/knn/primary.query-base.top100.ibin",
+  "knn_geometry": "primary",
+  "graph": "datasets/NEW_DATASET/graph/graph.roar.index",
+  "summary": "datasets/NEW_DATASET/graph/construction.json",
+  "query_limit": 100000,
+  "topk": 100,
+  "degree": 40,
+  "build_beam": 500,
+  "threads": 64
+}

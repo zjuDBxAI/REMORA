@@ -1,0 +1,13 @@
+{
+  "status": "COPIED_AND_STATICALLY_VERIFIED",
+  "files": 1462,
+  "source_bytes": 21099291,
+  "data_included": false,
+  "results_included": false,
+  "binaries_included": false,
+  "frozen_experiment_source": "/home/xzl/REMORA",
+  "newer_build_source": "/home/xzl/RoarGraph",
+  "python_syntax_checked": true,
+  "internal_cmake_sources_checked": true,
+  "original_directories_unchanged": true
+}

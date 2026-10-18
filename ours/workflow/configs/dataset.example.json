@@ -1,0 +1,8 @@
+{
+  "dataset": "t2i-10M",
+  "metric": "ip",
+  "dim": 200,
+  "base": "datasets/t2i-10M/base.fbin",
+  "build_queries": "datasets/t2i-10M/query.build.fbin",
+  "fit_queries": "datasets/t2i-10M/query.train.fbin"
+}

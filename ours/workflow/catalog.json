@@ -1,0 +1,62 @@
+{
+  "version": 1,
+  "methods": ["opq-pq", "qaq", "leanvec-ood", "extended-rabitq", "saq"],
+  "datasets": {
+    "t2i-10M": {
+      "dataset": "t2i-10M", "dim": 200, "primary_target_bits": 800, "side_bits": 64,
+      "prepare_config": "ours/test/t2i-10M/config.native100-gpu.json",
+      "performance_config": "ours/test/t2i-10M/config.native100-exp1-nvme.json",
+      "prepared": "outputs/t2i-10M/remora-native100-b64-v1",
+      "performance": "outputs/t2i-10M/remora-native100-traversal-exp1-nvme-b64-v2",
+      "teacher": "outputs/t2i-10M/remora-traversal-exp34-b64-v1",
+      "cold_store": "/tmp/xzl-t2i-10M-cold/base.10M.cold.bin",
+      "ranks": [50, 75, 100, 200], "budgets": [32, 64, 96, 128],
+      "published_rate": "outputs/t2i-10M/remora-traversal-exp5-b32-128-v1/experiment5/report/summary.json"
+    },
+    "t2i-1M": {
+      "dataset": "t2i-1M", "dim": 200, "primary_target_bits": 800, "side_bits": 64,
+      "prepare_config": "outputs/t2i-1M/remora-native100-exp1-nvme-b64-v1/prepare.config.json",
+      "performance_config": "outputs/t2i-1M/remora-native100-exp1-nvme-b64-v1/performance.config.json",
+      "prepared": "outputs/t2i-1M/remora-native100-exp1-nvme-b64-v1/prepared",
+      "performance": "outputs/t2i-1M/remora-native100-exp1-nvme-b64-v1/performance",
+      "teacher": "",
+      "cold_store": "/tmp/xzl-remora-t2i1m-exp345-v1/base.1M.cold.bin",
+      "ranks": [50, 75, 100, 200], "budgets": [32, 64, 96, 128]
+    },
+    "webvid": {
+      "dataset": "WebVid-2.5M", "dim": 512, "primary_target_bits": 2048, "side_bits": 160,
+      "prepare_config": "outputs/webvid/remora-traversal-exp1-nvme-b160-v1/inputs/prepare.config.json",
+      "performance_config": "outputs/webvid/remora-traversal-exp1-nvme-b160-v1/inputs/performance.config.json",
+      "prepared": "outputs/webvid/remora-traversal-exp1-nvme-b160-v1/prepared",
+      "performance": "outputs/webvid/remora-traversal-exp1-nvme-b160-v1/performance",
+      "teacher": "outputs/webvid/remora-traversal-exp34-b160-v1",
+      "cold_store": "/tmp/xzl-webvid-cold/base.2.5M.cold.bin",
+      "ranks": [50, 75, 100, 200], "budgets": [80, 160, 240, 320],
+      "published_rate": "outputs/webvid/remora-traversal-exp5-relative-b80-320-v1/experiment5/report/summary.json"
+    },
+    "rs5m": {
+      "dataset": "RS5M-512", "dim": 512, "primary_target_bits": 2048, "side_bits": 160,
+      "prepare_config": "outputs/rs5m/remora-traversal-exp1-nvme-b160-v1/inputs/prepare.config.json",
+      "performance_config": "outputs/rs5m/remora-traversal-exp1-nvme-b160-v1/inputs/performance.config.json",
+      "prepared": "outputs/rs5m/remora-traversal-exp1-nvme-b160-v1/prepared",
+      "performance": "outputs/rs5m/remora-traversal-exp1-nvme-b160-v1/performance",
+      "teacher": "outputs/rs5m/remora-exp345-relative-b80-320-v2/audit",
+      "diagnostic_source": "outputs/rs5m/remora-exp345-relative-b80-320-v2/reference",
+      "ablation_blocked": "RS5M prepared truth is Top-100; prepare a matching read-only Top-200 prepared-data view before the old ablation audit.",
+      "cold_store": "/tmp/xzl-rs5m512-cold/base.4.8M.cold.bin",
+      "ranks": [50, 75, 100, 200], "budgets": [80, 160, 240, 320],
+      "published_rate": "outputs/rs5m/remora-exp345-relative-b80-320-v2/rate/experiment5/report/summary.json"
+    },
+    "wordvector-id": {
+      "dataset": "WordVector-ID-custom-899K", "dim": 300, "primary_target_bits": 1200, "side_bits": 96,
+      "prepare_config": "outputs/wordvector-id/remora-traversal-exp1-nvme-b96-v1/inputs/prepare.config.json",
+      "performance_config": "outputs/wordvector-id/remora-traversal-exp1-nvme-b96-v1/inputs/performance.config.json",
+      "prepared": "outputs/wordvector-id/remora-traversal-exp1-nvme-b96-v1/prepared",
+      "performance": "outputs/wordvector-id/remora-traversal-exp1-nvme-b96-v1/performance",
+      "teacher": "outputs/wordvector-id/remora-exp34-b96-v1",
+      "cold_store": "/tmp/xzl-wordvector-id-cold/base.899K.cold.bin",
+      "ranks": [50, 75, 100], "budgets": [48, 96, 144, 192],
+      "note": "Existing ground truth is Top-100. Experiment 2's old audit requires Top-200 and is blocked until that input is supplied."
+    }
+  }
+}

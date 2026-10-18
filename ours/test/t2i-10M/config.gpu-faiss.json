@@ -1,0 +1,7 @@
+{
+  "device": "cuda:2",
+  "kmeans_device": "cuda:2",
+  "geometric_encoder": "faiss",
+  "geometric_encoder_device": "cuda:2",
+  "output_root": "outputs/t2i-10M/remora-gpu-faiss-simd-v2"
+}

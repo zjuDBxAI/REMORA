@@ -1,0 +1,13 @@
+{
+  "kind": "fp32",
+  "base": "datasets/NEW_DATASET/data/base.fbin",
+  "queries": "datasets/NEW_DATASET/data/query.build.fbin",
+  "knn": "datasets/NEW_DATASET/knn/fp32.query-base.top100.ibin",
+  "knn_geometry": "fp32",
+  "graph": "datasets/NEW_DATASET/graph/fp32.roar.index",
+  "query_limit": 100000,
+  "topk": 100,
+  "degree": 40,
+  "build_beam": 500,
+  "threads": 64
+}

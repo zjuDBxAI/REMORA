@@ -1,0 +1,53 @@
+# Local environments and agent configuration
+.venv/
+venv/
+.env
+.env.*
+!.env.example
+.codex/
+.agents/
+.aws/
+.ssh/
+
+# Python caches
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+
+# Datasets, models, measurements, and generated release packages
+/data/
+/datasets/
+/outputs/
+/results/
+/logs/
+/release/
+/ours/data/
+/ours/outputs/
+/ours/results/
+/ours/runtime/
+*.bin
+*.fbin
+*.ibin
+*.npz
+*.npy
+*.log
+
+# Build products; build-source/ contains required source code
+build/
+/build-*/
+!/build-source/
+/ours/build-*/
+/build-source/ours/build-*/
+.runtime/
+CMakeCache.txt
+CMakeFiles/
+*.o
+*.a
+*.so
+*.so.*
+
+# Editors and operating systems
+.DS_Store
+*~
+*.swp

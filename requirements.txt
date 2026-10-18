@@ -1,0 +1,7 @@
+# Python requirements for training and experiments; GPU wheels/Faiss runtime
+# must match the target machine. This is not an exact locked environment.
+numpy
+torch
+scipy
+matplotlib
+# Install/build GPU-enabled Faiss separately; see README.md.
